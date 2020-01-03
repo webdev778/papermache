@@ -2,7 +2,7 @@
   .container
     .row
       .col-md-4
-        = link_to do
+        = link_to(papermache_papers_path) do
           %h3
             Discover Research
             %span.glyphicon.glyphicon-menu-right{"aria-hidden" => "true"}
@@ -13,21 +13,25 @@
           Curious to see what your fellow students learn about?
           Let's get started.
       .col-md-4
-        = link_to do
+        = link_to(papermache_papers_path) do
           %h3
             Discover Peers
             %span.glyphicon.glyphicon-menu-right{"aria-hidden" => "true"}
         .image
           = image_tag 'services-2.jpg'
         %p
-          Use Papermache to build a network of researchers equally
-          as valuable as the research they produce.
-          Reach out, collaborate, and write better papers.
+          Papermache goes beyond the trenchcoat and bathroom stall office to build a network for researchers equally as valuable as the research they produce. Reach out, collaborate, and write better papers.
       .col-md-4
-        = link_to do
-          %h3
-            Contribute Papers
-            %span.glyphicon.glyphicon-menu-right{"aria-hidden" => "true"}
+        - if current_student.present?
+          = link_to(uploadpaper_account_path(:id => current_student.id)) do
+            %h3
+              Contribute Papers
+              %span.glyphicon.glyphicon-menu-right{"aria-hidden" => "true"}
+        - else
+          = link_to(papermache_papers_path) do
+            %h3
+              Contribute Papers
+              %span.glyphicon.glyphicon-menu-right{"aria-hidden" => "true"}     
         .image
           = image_tag 'services-3.jpg'
         %p
