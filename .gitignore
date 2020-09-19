@@ -18,6 +18,5 @@
 /public/uploads
 /.idea
 /.vscode
-/Gemfile.lock
 /db/schema.rb
 /nohup.out
