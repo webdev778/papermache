@@ -10,7 +10,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'rails4-autocomplete'
-gem 'jquery-ui-rails', '~> 5.0.5'
+gem 'jquery-ui-rails', '~> 6.0.0'
 gem 'pdfjs_viewer-rails'
 # gem 'annotator-rails'
 gem 'annotator_store', :git => 'https://github.com/Seikoh/annotator_store-gem.git'
